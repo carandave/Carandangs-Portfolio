@@ -293,6 +293,8 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-animation: anime 1s ease-out infinite alternate-reverse;
+    animation: anime 1s ease-out infinite alternate-reverse;
 }
 
 #bootstrap .btstrap img{
@@ -353,6 +355,8 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-animation: anime 1s ease-out infinite alternate-reverse;
+    animation: anime 1s ease-out infinite alternate-reverse;
 }
 
 #jquery .jayquery img{
@@ -414,6 +418,17 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-animation: anime 1s ease-out infinite alternate-reverse;
+    animation: anime 1s ease-out infinite alternate-reverse;
+}
+
+@keyframes anime{
+    100%{
+        transform: translateY(10px);
+        -webkit-transform: translateY(10px);
+        -ms-transform: translateY(10px);
+        -o-transform: translateY(10px);
+    }
 }
 
 #codeigniter .cdigniter img{
@@ -477,10 +492,178 @@ header{
 }
 
 
+
+
+
+/* ABOUT SECTION
+
 .about{
-    height: 100vh;
-    background-color: green;
+    position: relative;
+    width: 1050px;
+    min-height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 2rem;
+    flex-direction: column;
+    background-color: var(--bg-color);
 }
+
+.about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.about-img{
+    max-width: 550px;
+    height: auto;
+}
+
+.about-img img{
+    min-width: 100%;
+    height: 100%;
+}
+
+.about-content h4{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about-content h2{
+    font-size: 36px;
+    font-weight: 600;
+    margin: 12px 0;
+}
+
+.about-content p{
+    text-align: justify;
+    font-size: 14px;
+    color: rgb(99, 99, 99);
+    font-weight: 400;
+}
+
+.about-content{
+    margin-top: 25px;
+    padding: 20px;
+}
+
+.about-content .btn-cv{
+    cursor: pointer;
+    padding: 12px 18px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.about-content .btn-cv:hover{
+    cursor: pointer;
+    padding: 12px 18px;
+    background-color: rgb(145, 145, 145);
+    color: var(--bg-color);
+    border-radius: 5px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    font-size: 12px;
+} */
+    .about{
+        position: relative;
+        width: 100%;
+        min-height: 70vh;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 4rem 2rem;
+        flex-direction: column;
+        background-color: var(--bg-color);
+    }
+
+    .about-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .about-img {
+        flex: 0 0 50%; /* 50% width for large screens */
+        max-width: 50%;
+        box-sizing: border-box;
+        padding: 0 15px;
+    }
+    .about-content {
+        flex: 0 0 50%; /* 50% width for large screens */
+        max-width: 50%;
+        box-sizing: border-box;
+        padding: 0 15px;
+    }
+    .about-img img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .about-content h4{
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .about-content h2{
+        font-size: 36px;
+        font-weight: 600;
+        margin: 12px 0;
+    }
+
+    .about-content p{
+        text-align: justify;
+        font-size: 14px;
+        color: rgb(99, 99, 99);
+        font-weight: 400;
+    }
+
+  .about-content .btn-cv{
+    cursor: pointer;
+    padding: 12px 18px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    font-size: 12px;
+    transition: 0.3s ease;
+    }
+
+.about-content .btn-cv:hover{
+    cursor: pointer;
+    padding: 12px 18px;
+    background-color: rgb(145, 145, 145);
+    color: var(--bg-color);
+    border-radius: 5px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    font-size: 12px;
+} 
+
+
+
+
+
+
 
 .projects{
     height: 100vh;
@@ -490,6 +673,7 @@ header{
     height: 100vh;
     background-color: orange;
 }
+
 
 
 
@@ -698,6 +882,41 @@ header{
         width: 23px;
         height: 23px;
     }
+
+    /* ABOUT SECTION */
+
+    .about-img, .about-content {
+        flex: 0 0 50%; /* Full width for smaller screens */
+        max-width: 50%;
+    }
+
+    .about-content h4{
+        font-size: 14px;
+    }
+
+    .about-content h2{
+        font-size: 32px;
+    }
+
+    .about-content p{
+        font-size: 12px;
+    }
+
+    .about-content .btn-cv{
+        padding: 10px 16px;
+        font-size: 10px;
+        transition: 0.3s ease;
+        }
+    
+    .about-content .btn-cv:hover{
+        padding: 10px 16px;
+        font-size: 10px;
+    } 
+
+
+
+
+    
     
   
 }
@@ -827,11 +1046,8 @@ header{
     }
 
     #bootstrap{
-        position: absolute;
-        left: 470px;
-        top: 100px;
-        z-index: 10;
-        display: none;
+        left: 270px;
+        top: 200px;
     }
 
     #bootstrap .btstrap{
@@ -848,11 +1064,8 @@ header{
 
 
     #jquery{
-        position: absolute;
-        left: 550px;
-        top: 450px;
-        z-index: 10;
-        display: none;
+        left: 50px;
+        top: 650px;
     }
     
     #jquery .jayquery{
@@ -871,22 +1084,55 @@ header{
     /* CODEIGNITER */
 
     #codeigniter{
-        position: absolute;
-        left: 800px;
-        top: 200px;
-        display: none;
+        left: 300px;
+        top: 750px;
     }
 
     #codeigniter .cdigniter{
         font-size: 18px;
         width: 45px;
         height: 45px;
-        line-height: 45px;
     }
 
     #codeigniter .cdigniter img{
         width: 23px;
         height: 23px;
+    }
+
+
+    /* ABOUT SECTION */
+
+    .about{
+        position: relative;
+        width: 100%;
+        min-height: 50vh;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2rem 2rem;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        margin-bottom: 50px;
+    }
+
+    .about-img{
+        display: none;
+    }
+
+    .about-content {
+        flex: 1; /* Full width for smaller screens */
+        max-width: 100%;
+    }
+
+    .about-content h4{
+        font-size: 16px;
+    }
+
+    .about-content h2{
+        font-size: 28px;
+    }
+
+    .about-content p{
+        font-size: 14px;
     }
 
 }
