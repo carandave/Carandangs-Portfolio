@@ -25,4 +25,66 @@ window.onscroll = () =>{
     }
   })
 }
+
+
+// SKILLS SECTION
+
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const skillsList = document.querySelector('.skills-list');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const filter = btn.dataset.filter;
+
+      filterBtns.forEach(btn => {
+        btn.classList.remove('active');
+      });
+      btn.classList.add('active');
+
+      
+
+      
+
+      skillsList.querySelectorAll('.skill').forEach(skill => {
+        // Dito tayo mag didisplay kapag maouout yung skill container
+        
+        // skill.style.opacity = 0;
+        // skill.style.display = 'none';
+        // skill.style.visibility = 'hidden';
+        // skill.style.display = 'none';
+        // skill.style.display = 'none';
+
+        setTimeout(function() {
+            skill.style.top = 0;
+            skill.style.left = 0;
+            skill.style.transform = `translateY(50%)`;
+            skill.style.opacity = 0;
+            
+            setTimeout(function() {
+              skill.style.display = 'none';
+                
+            }, 300); 
+        }); 
+      
+        
+        if (filter === 'all' || skill.classList.contains(filter)) {
+          
+          setTimeout(function() {
+            skill.style.top = 0;
+            skill.style.left = 0;
+            skill.style.transform = `translate(50%)`;
+            skill.style.transform = `translate(0)`;
+              skill.style.opacity = 1;
+              setTimeout(function() {
+                skill.style.display = 'block';
+              }, 300);
+          });
+
+          
+        }
+      });
+    });
+  });
+});
   
