@@ -864,7 +864,7 @@ header{
         margin-right: auto;
         padding: 4rem 2rem;
         flex-direction: column;
-        background-color: var(--bg-color);
+        background-color: rgba(255, 255, 255, 0.486);
     }
 
     .contacts-container {
@@ -971,11 +971,41 @@ header{
         width: 100%; */
         width: 100%;
         padding-left: 20px;
+        height: 100%;
     }
 
     .main-contact-message textarea{
         box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+        height: 63%;
     }
+
+    .main-contact-message .btn-cv{
+        cursor: pointer;
+        padding: 12px 18px;
+        background-color: var(--primary-color);
+        color: var(--bg-color);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        transition: 0.3s ease;
+        height: 24%;
+        width: 100%;
+        }
+    
+    .main-contact-message .btn-cv:hover{
+        cursor: pointer;
+        padding: 12px 18px;
+        background-color: rgb(145, 145, 145);
+        color: var(--bg-color);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 12px;
+    } 
 
     .inputs-msg{
         background-color: transparent;
@@ -984,6 +1014,23 @@ header{
         border: 1px solid var(--hover-primary-color);
         width: 100%;
         margin: 5px 0;
+    }
+
+
+    /* FOOTER */
+
+    .footer{
+        width: 100%;
+        min-height: 15vh;
+        background-color: var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footers-container p{
+        color: var(--bg-color);
+        margin-bottom: 0;
     }
 
 
@@ -1226,9 +1273,6 @@ header{
 
 
 
-
-    
-    
   
 }
 
@@ -1270,7 +1314,15 @@ header{
     .media-icons{
         display: flex;
         flex-direction: column;
-        margin-right: 20px;
+        margin-right: 10px;
+    }
+
+    .home .home-container{
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; */
+        padding: 0 20px;
     }
 
     .info{
@@ -1279,18 +1331,18 @@ header{
     
     .info h2{
         color: var(--primary-color);
-        font-size: 32px;
+        font-size: 34px;
         font-weight: 700;
-        line-height: 70px;
+        line-height: 60px;
     }
 
     .info .text-animation{
         color: var(--primary-color);
-        font-size: 24px;
+        font-size: 26px;
         min-width: 200px;
         font-weight: 500;
         line-height: 50px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     
     .info{
@@ -1299,9 +1351,9 @@ header{
     
     .info p{
         color: var(--primary-color);
-        font-size: 12px;
+        font-size: 14px;
         width: 300px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         position: relative;
         z-index: 1500;
     }
@@ -1376,7 +1428,7 @@ header{
 
     #jquery{
         left: 50px;
-        top: 650px;
+        top: 580px;
     }
     
     #jquery .jayquery{
@@ -1395,8 +1447,8 @@ header{
     /* CODEIGNITER */
 
     #codeigniter{
-        left: 300px;
-        top: 750px;
+        left: 250px;
+        top: 650px;
     }
 
     #codeigniter .cdigniter{
@@ -1448,6 +1500,27 @@ header{
 
     /* SKILLS SECTION */
 
+    .skills-menu {
+        margin-bottom: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        margin-right: 0;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #333;
+        transition: 0.5s ease all;
+        background-color: transparent;
+        border-bottom: 0px solid var(--primary-color);
+    }
+
     .skills-title h4{
         font-size: 32px;
         text-align: center;
@@ -1456,7 +1529,7 @@ header{
 
     .skills-list {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         grid-gap: 18px;
     }
 
@@ -1560,6 +1633,26 @@ header{
     .main-contact-message{
         padding-left: 0;
         margin-left: 0;
+    }
+
+
+    /* FOOTER */
+
+    .footer{
+        width: 100%;
+        min-height: 15vh;
+        background-color: var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .footers-container p{
+        color: var(--bg-color);
+        margin-bottom: 0;
+        font-size: 14px;
+        text-align: center;
     }
 
 }
