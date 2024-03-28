@@ -7,7 +7,7 @@ let navLinks = document.querySelectorAll('header nav a');
 menuIcon.onclick = () =>{
   menuIcon.classList.toggle('fa-xmark');
   navbar.classList.toggle('active');
-  navbar.classList.toggle('animate__animated');
+  navbar.classList.toggle('animate__animated animate__bounce animate__delay-1s');
   navbar.classList.toggle('animate__fadeInDown'); 
 }
 
@@ -87,4 +87,72 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
+
+// ANIMATION
+
+// ABOUT 
+const obsesrverA = new IntersectionObserver((entries) => {
+  entries.forEach((entry) =>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+    else{
+      entry.target.classList.remove('show');
+    }
+  })
+})
+
+const hiddenElementsA = document.querySelectorAll('.hidden');
+hiddenElementsA.forEach((el) => obsesrverA.observe(el))
+
+
+// SKILL
+const obsesrverS = new IntersectionObserver((entries) => {
+  entries.forEach((entry) =>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show-skill');
+    }
+    else{
+      entry.target.classList.remove('show-skill');
+    }
+  })
+})
+
+
+const hiddenElementsS = document.querySelectorAll('.hidden-skill');
+hiddenElementsS.forEach((el) => obsesrverS.observe(el))
+
+
+// PROJECT
+const obsesrverP = new IntersectionObserver((entries) => {
+  entries.forEach((entry) =>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show-project');
+    }
+    else{
+      entry.target.classList.remove('show-project');
+    }
+  })
+})
+
+const hiddenElementsP = document.querySelectorAll('.hidden-project');
+hiddenElementsP.forEach((el) => obsesrverP.observe(el))
+
+
+// CONTACTS
+const obsesrverC = new IntersectionObserver((entries) => {
+  entries.forEach((entry) =>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show-contacts');
+    }
+    else{
+      entry.target.classList.remove('show-contacts');
+    }
+  })
+})
+
+const hiddenElementsC = document.querySelectorAll('.hidden-contacts');
+hiddenElementsC.forEach((el) => obsesrverC.observe(el))
   

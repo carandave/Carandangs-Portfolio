@@ -575,6 +575,36 @@ header{
     font-size: 12px;
 } 
 
+/* START ANIMATION ABOUT */
+
+.hidden{
+    opacity: 0;
+    transition: 1s ease all;
+    transform: translateX(-100%);
+}
+
+.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.abouts:first-child(){
+    transition-delay: 300ms;
+}
+
+.abouts:nth-child(2){
+    
+    transition-delay: 400ms;
+}
+
+@media(prefers-reduce-motion){
+    .hidden{
+        transition: none;
+    }
+}
+
+/* END ANIMATION ABOUT */
+
     /* SKILLS SECTION */
 
     .skills{
@@ -640,6 +670,78 @@ header{
         box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
         transition: 0.3s ease all;
     }
+
+    /* START ANIMATION SKILL */
+
+    .hidden-skill{
+        opacity: 0;
+        transition: 1s ease all;
+        /* transform: translateX(-100%); */
+        transform: scale(0);
+    }
+
+    .show-skill{
+        opacity: 1;
+        /* transform: translateX(0); */
+        transform: scale(1);
+    }
+
+    .skill:first-child(){
+        transition-delay: 200ms;
+    }
+
+    .skill:nth-child(2){
+        
+        transition-delay: 300ms;
+    }
+
+    .skill:nth-child(3){
+        
+        transition-delay: 400ms;
+    }
+
+    .skill:nth-child(4){
+        
+        transition-delay: 500ms;
+    }
+
+    .skill:nth-child(5){
+        
+        transition-delay: 600ms;
+    }
+    
+    .skill:nth-child(6){
+        
+        transition-delay: 700ms;
+    }
+
+    .skill:nth-child(7){
+        
+        transition-delay: 800ms;
+    }
+
+    .skill:nth-child(8){
+        
+        transition-delay: 900ms;
+    }
+
+    .skill:nth-child(9){
+        
+        transition-delay: 1000ms;
+    }
+
+    .skill:nth-child(10){
+        
+        transition-delay: 1100ms;
+    }
+
+    @media(prefers-reduce-motion){
+        .hidden{
+            transition: none;
+        }
+    }
+
+    /* END ANIMATION SKILL */
     
 
     .skill .skill-img{
@@ -708,7 +810,92 @@ header{
         display: grid;
         grid-template-columns: 40% 60%;
         margin-top: 30px;
+        border-top: 6px solid var(--primary-color);
     }
+
+    /* START ANIMATION PROJECT */
+
+    .hidden-project{
+        opacity: 0;
+        transition: 1s ease all;
+        transform: scale(.8);
+        /* transform: translateX(-100%); */
+        /* transform: translateX(-100%); */
+    }
+
+    .show-project{
+        opacity: 1;
+        transform: scale(1);
+        /* transform: translateX(0); */
+        
+    }
+
+    
+
+    .hidden-project:first-child(){
+        transition-delay: 100ms;
+    }
+
+    .hidden-project:nth-child(2){
+        /* opacity: 1;
+        transition: 0.5s ease all;
+        transform: translateX(0); */
+        transition-delay: 150ms;
+        
+    }
+
+    .project:nth-child(3){
+        
+        transition-delay: 200ms;
+    }
+
+    .project:nth-child(4){
+        
+        transition-delay: 250ms;
+    }
+
+    .project:nth-child(5){
+        transition-delay: 300ms;
+        
+    }
+    
+    .project:nth-child(6){
+        
+        transition-delay: 350ms;
+    }
+
+    .project:nth-child(7){
+        
+        transition-delay: 400ms;
+    }
+
+    .project:nth-child(8){
+        
+        transition-delay: 450ms;
+    }
+
+    .project:nth-child(9){
+        
+        transition-delay: 550ms;
+    }
+
+    .project:nth-child(10){
+        transition-delay: 600ms;
+       
+    }
+
+    .project:nth-child(11){
+        
+        transition-delay: 650ms;
+    }
+
+    @media(prefers-reduce-motion){
+        .hidden{
+            transition: none;
+        }
+    }
+
+    /* END ANIMATION PROJECT */
 
     .project-img{
         width: 100%;
@@ -866,6 +1053,25 @@ header{
         flex-direction: column;
         background-color: rgba(255, 255, 255, 0.486);
     }
+
+    /* START ANIMATION CONTACT */
+
+    .hidden-contacts{
+        opacity: 0;
+        transition: 1s ease all;
+    }
+
+    .show-contacts{
+        opacity: 1;
+    }
+
+    @media(prefers-reduce-motion){
+        .hidden{
+            transition: none;
+        }
+    }
+
+    /* END ANIMATION CONTACT */
 
     .contacts-container {
         max-width: 85%;
