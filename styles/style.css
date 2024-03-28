@@ -12,10 +12,20 @@
 :root{
     --bg-color: #f9f9f9;
     --primary-color: #333;
+
     --secondary-bg-color: #d2ffd1;
+
+    /* --primary-color: #f9f9f9;
+    --bg-color: #000106; */
 
     --hover-primary-color: rgb(231, 231, 231);
     --gray-background-color:  rgb(190, 190, 190);
+}
+
+.dark-theme{
+    --primary-color: #f9f9f9;
+    --bg-color: #000106;
+    transition: ease 1s;
 }
 
 html{
@@ -44,7 +54,7 @@ header{
 
 .logo{
     font-size: 24px;
-    color: black;
+    color: var(--primary-color);
     font-weight: 700;
     cursor: pointer;
     transition: 0.3s ease;
@@ -56,18 +66,39 @@ header{
 
 .navbar a{
     font-size: 14px;
-    color: black;
+    color: var(--primary-color);
     margin-left: 2rem;
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
 
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-right: 20px;
+}
+
 .navbar a:hover,
 .navbar a.active{
-    color: black;
-    border-bottom: 3px solid black;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
 }
+
+.nav-container-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    height: auto;
+    width: 25px;
+}
+
+
   
 #menu-icon{
     font-size: 24px;
@@ -118,7 +149,7 @@ header{
 }
 
 .media-icons a:hover{
-    color: var(--primary-color);
+    color: var(--bg-color);
     font-size: 28px;
     margin-top: 10px;
     padding: 10px;
@@ -531,12 +562,14 @@ header{
     .about-content h4{
         font-size: 16px;
         font-weight: 400;
+        color: var(--primary-color);
     }
 
     .about-content h2{
         font-size: 36px;
         font-weight: 600;
         margin: 12px 0;
+        color: var(--primary-color);
     }
 
     .about-content p{
@@ -544,6 +577,7 @@ header{
         font-size: 14px;
         color: rgb(99, 99, 99);
         font-weight: 400;
+        
     }
 
   .about-content .btn-cv{
@@ -615,7 +649,8 @@ header{
         margin-right: auto;
         padding: 4rem 2rem;
         flex-direction: column;
-        background-color: rgba(241, 241, 241, 0.851);
+        /* background-color: rgba(241, 241, 241, 0.851); */
+        background-color: var(--bg-color);
     }
 
     .skills-container {
@@ -627,6 +662,7 @@ header{
         font-size: 38px;
         text-align: center;
         font-weight: 600;
+        color: var(--primary-color);
     }
   
     .skills-menu {
@@ -644,7 +680,7 @@ header{
         border: none;
         outline: none;
         cursor: pointer;
-        color: #333;
+        color: var(--primary-color);
         transition: 0.5s ease all;
         background-color: transparent;
         border-bottom: 0px solid var(--primary-color);
@@ -763,7 +799,7 @@ header{
         text-align: center;
         font-weight: 400;
         font-size: 14px;
-        color: var(--primary-color);
+        /* color: var(--primary-color); */
     }
 
     /* PRJECTS SECTION */
@@ -788,6 +824,7 @@ header{
         font-size: 38px;
         text-align: center;
         font-weight: 600;
+        color: var(--primary-color);
     }
 
     
@@ -1030,7 +1067,7 @@ header{
     .view-content img{
         width: 25px;
         height: auto;
-        color: var(--bg-color);
+        color: var(--primary-color);
     }
 
     .view-content:hover img{
@@ -1051,17 +1088,19 @@ header{
         margin-right: auto;
         padding: 4rem 2rem;
         flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.486);
+        background-color: var(--bg-color);
     }
 
     /* START ANIMATION CONTACT */
 
     .hidden-contacts{
         opacity: 0;
+        
         transition: 1s ease all;
     }
 
     .show-contacts{
+        transition-delay: 500ms;
         opacity: 1;
     }
 
@@ -1082,6 +1121,7 @@ header{
         font-size: 38px;
         text-align: center;
         font-weight: 600;
+        color: var(--primary-color);
     }
 
     .contact-content{
@@ -1117,12 +1157,13 @@ header{
 
     .info-icon i {
         font-size: 28px;
-        color: #333;
+        color: var(--primary-color);
     }
 
 
     .info-cn p{
         font-size: 15px;
+        color: var(--primary-color);
     }
 
     .info-cn .text-gray{
@@ -1160,6 +1201,7 @@ header{
         border: 1px solid var(--hover-primary-color);
         width: 100%;
         margin: 5px 0;
+        color: var(--primary-color);
         box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
     }
 
@@ -1167,6 +1209,7 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
+        
     }
 
     .main-contact-message{
@@ -1220,6 +1263,7 @@ header{
         border: 1px solid var(--hover-primary-color);
         width: 100%;
         margin: 5px 0;
+        color: var(--primary-color);
     }
 
 
@@ -1247,13 +1291,27 @@ header{
 @media (min-width: 768px) and (max-width: 1024px) {
   /* Your CSS rules for tablets */
 
-    /* header{
-    background-color: rgba(255, 255, 255, 1);
-    border-bottom: 1px solid lightgray;
-    } */
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem 15%;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
 
     #menu-icon{
         display: block;
+        color: var(--primary-color);
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
     }
 
     .navbar{
@@ -1262,10 +1320,14 @@ header{
         left: 0;
         width: 100%;
         padding: 1rem 3%;
-        background-color: rgba(255, 255, 255, 1);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        /* background-color: transparent; */
+        /* background-color: rgba(255, 255, 255, 1); */
+        background-color: var(--bg-color);
+        backdrop-filter: blur(10px);
         display: none;
-        border-top: 1px solid lightgray;
+        z-index: 100;
+        box: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
     }
 
     .navbar.active{
@@ -1276,8 +1338,15 @@ header{
         display: block;
         font-size: 1rem;
         margin: 1rem 0;
-        color: black;
+        color: var(--primary-color);
         text-align: center;
+    }
+
+    .nav-container-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
     }
 
     .media-icons{
@@ -1486,10 +1555,37 @@ header{
     header{
         background-color: rgba(255, 255, 255, 1);
         border-bottom: 1px solid lightgray;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .icon{
+        color: #000106;
+        background-color: black;
+        border-radius: 50px;
+        padding: 5px;
+    }
+
+    .logo{
+        color: #000106;
     }
 
     #menu-icon{
         display: block;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 10px;
+    }
+
+    .nav-container-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-container-icon img{
     }
 
     .navbar{
@@ -1502,19 +1598,29 @@ header{
         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
         display: none;
         border-top: 1px solid lightgray;
+        
     }
 
     .navbar.active{
         display: block;
+        color: #000106;
+    }
+
+    .navbar a.active{
+        color: #000106;
     }
 
     .navbar a{
         display: block;
         font-size: 1rem;
         margin: 1rem 0;
-        color: black;
         text-align: center;
+        color: #000106;
         
+    }
+
+    .navbar a:hover{
+        border-bottom: 3px solid black;        
     }
 
     .media-icons{
@@ -1743,6 +1849,9 @@ header{
         padding: 10px 30px 10px;
     }
     
+    .skills-menu button{
+        color: var(--primary-color);
+    }
 
     .skill .skill-img{
         width: 100%;
@@ -1757,7 +1866,7 @@ header{
         text-align: center;
         font-weight: 400;
         font-size: 12px;
-        color: var(--primary-color);
+        /* color: var(--primary-color); */
     }
 
 

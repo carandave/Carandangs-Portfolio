@@ -155,4 +155,20 @@ const obsesrverC = new IntersectionObserver((entries) => {
 
 const hiddenElementsC = document.querySelectorAll('.hidden-contacts');
 hiddenElementsC.forEach((el) => obsesrverC.observe(el))
+
+
+
+// DARK THEME ANIMATION
+
+let icon = document.getElementById('icon');
+
+icon.onclick = function(){
+  document.body.classList.toggle('dark-theme');
+
+  if(document.body.classList.contains('dark-theme')){
+    icon.src = 'imgs/sun.png';
+  }else{
+    icon.src = 'imgs/moon.png';
+  }
+}
   
