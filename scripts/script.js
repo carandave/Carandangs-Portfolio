@@ -20,7 +20,9 @@ window.onscroll = () =>{
     if (top >= offset && top < offset + height){
        navLinks.forEach(links => {
         links.classList.remove('active');
-        document.querySelector('header nav a[href*='+ id +']').classList.add('active' ) ;
+        navbar.classList.remove('active');
+        menuIcon.classList.remove('fa-xmark');
+        document.querySelector('header nav a[href*='+ id +']').classList.add('active');
        }) 
     }
   })
@@ -47,23 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
       
 
       skillsList.querySelectorAll('.skill').forEach(skill => {
-        // Dito tayo mag didisplay kapag maouout yung skill container
+        console.log(skill)
         
-        // skill.style.opacity = 0;
-        // skill.style.display = 'none';
-        // skill.style.visibility = 'hidden';
-        // skill.style.display = 'none';
-        // skill.style.display = 'none';
-
         setTimeout(function() {
             skill.style.top = 0;
             skill.style.left = 0;
-            skill.style.transform = `translateY(50%)`;
+            skill.style.transform = `scale(0)`;
             skill.style.opacity = 0;
             
             setTimeout(function() {
               skill.style.display = 'none';
-                
             }, 300); 
         }); 
       
@@ -73,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
           setTimeout(function() {
             skill.style.top = 0;
             skill.style.left = 0;
-            skill.style.transform = `translate(50%)`;
-            skill.style.transform = `translate(0)`;
+            skill.style.transform = `scale(0)`;
+            skill.style.transform = `scale(1)`;
               skill.style.opacity = 1;
               setTimeout(function() {
                 skill.style.display = 'block';
